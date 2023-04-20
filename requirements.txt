@@ -3,4 +3,5 @@ numpy
 seaborn
 folium
 streamlit_folium
+xgboost
 -e .
