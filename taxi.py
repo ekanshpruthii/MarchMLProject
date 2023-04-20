@@ -38,8 +38,6 @@ def main():
     now = datetime.now()
     current_time = now.strftime("%Y-%m-%d %H:%M:%S")
 
-    st.write('Taxi Demand Prediction application')
-    st.write('Updated time',  current_time)
 
     latest_data = pd.read_csv('updated_data.csv')
 
@@ -62,6 +60,8 @@ def main():
 
     # Display the map
     folium_static(m)
+    
+    st.write('Updated time',  current_time)
 
 if __name__ == '__main__':
     main()
