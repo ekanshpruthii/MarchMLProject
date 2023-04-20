@@ -22,11 +22,12 @@ def predict(x):
 # create a Streamlit app
 def main():
 
-    one_month_ago = datetime.now() - timedelta(days=90)
-    one_month_ago_formatted = one_month_ago.strftime("%Y-%m-%d %H:%M:%S")
+
+    now = datetime.now()
+    current_time = now.strftime("%Y-%m-%d %H:%M:%S")
 
     st.title('Taxi Demand Prediction')
-    st.write('Updated time',  one_month_ago_formatted)
+    st.write('Updated time',  current_time)
 
     latest_data = pd.read_csv('updated_data.csv')
 
