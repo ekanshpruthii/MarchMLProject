@@ -21,12 +21,25 @@ def predict(x):
 
 # create a Streamlit app
 def main():
+    
+    # set the background color
+    page_bg = """
+    <style>
+    body {
+    background-color: black;
+    }
+    </style>
+    """
+    st.markdown(page_bg, unsafe_allow_html=True)
 
+    # add the image and title
+    st.image('logo.png')
+    st.title('Locate Now')
 
     now = datetime.now()
     current_time = now.strftime("%Y-%m-%d %H:%M:%S")
 
-    st.title('Taxi Demand Prediction')
+    st.write('Taxi Demand Prediction application')
     st.write('Updated time',  current_time)
 
     latest_data = pd.read_csv('updated_data.csv')
