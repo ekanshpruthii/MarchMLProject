@@ -2,4 +2,5 @@ pandas
 numpy
 seaborn
 folium
+streamlit_folium
 -e .
