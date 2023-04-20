@@ -32,9 +32,8 @@ def main():
     """
     st.markdown(page_bg, unsafe_allow_html=True)
 
-    # add the image and title
+    # add the image
     st.image('logo.png')
-    st.title('Locate Now')
 
     now = datetime.now()
     current_time = now.strftime("%Y-%m-%d %H:%M:%S")
